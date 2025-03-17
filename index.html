@@ -5,6 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Risk Management Dashboard</title>
     <link rel="stylesheet" href="styles.css"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        #riskDashboard {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .riskCard {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .riskCard h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .riskCard p {
+            margin: 5px 0;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input, select, button {
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 1em;
+            width: 100%;
+            box-sizing: border-box;
+        
+        }
+    </style>
 <body>
     <div id="riskDashboard">
         <h1>Risk Management Dashboard</h1>
@@ -12,8 +59,17 @@
             <label for="riskTitle">Risk Title:</label>
             <input type="text" id="riskTitle" name="riskTitle" required>
             <br><br>
+            <label for="riskLevel">Risk Level:</label>
+            <select id="riskLevel" name="riskLevel" required>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+    
             <label for="riskDescription">Risk Description:</label>
             <textarea id="riskDescription" name="riskDescription" required></textarea>
+            <label for="department">Department:</label>
+            <input type="text" id="department" name="department" required>
             <br><br>
             <button type="submit">Submit New Risk</button>
         </form>
