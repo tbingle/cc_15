@@ -27,6 +27,7 @@ function addRiskItem(riskName, riskLevel, department) {
 
 const resolveButton = riskCard.querySelector(".resolveButton");
     resolveButton.addEventListener("click", function() {
+        event.stopPropagation();
         riskCard.remove();
     });
 }
