@@ -13,9 +13,15 @@ function addRiskItem(riskName, riskLevel, department) {
         <h3>${riskName}</h3>
         <p><strong>Risk Level:</strong> ${riskLevel}</p>
         <p><strong>Department:</strong> ${department}</p>
+        <button class="resolveButton">Resolve</button>
     `;
     //New risk card to the dashboard
     riskDashboard.appendChild(riskCard);
+
+const resolveButton = riskCard.querySelector(".resolveButton");
+    resolveButton.addEventListener("click", function() {
+        riskCard.remove();
+    });
 }
 //Event listener for the form submission
 document.getElementById("riskForm").addEventListener("submit", function(event) {
